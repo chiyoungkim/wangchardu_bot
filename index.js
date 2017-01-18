@@ -38,7 +38,8 @@ app.post('/webhook', function (req, res) {
 });
 
 function chunkText(text) {
-    return text.match(/(.|[\r\n]){1,640});
+    var chunks = text.match(/(.|[\r\n]){1,640});
+    return chunks;
 };
 
 // generic function sending messages
