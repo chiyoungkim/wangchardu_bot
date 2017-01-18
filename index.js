@@ -38,7 +38,7 @@ app.post('/webhook', function (req, res) {
 });
 
 function chunkText(text) {
-    var chunks = text.match(/(.|[\r\n]){1,640});
+    var chunks = text.match(/(.|[\r\n]){1,640}/g);
     return chunks;
 };
 
