@@ -32,6 +32,8 @@ app.post('/webhook', function (req, res) {
                 kittenMessage(event.sender.id, event.message.text);
             } else if (keyword === 'spaghetti') {
                 navySealMessage(event.sender.id, event.message.text);
+            } else if (keyword === 'test') {
+                sendMessage(event.sender.id, {text: "Hello."});
             } else {
                 sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
             }
